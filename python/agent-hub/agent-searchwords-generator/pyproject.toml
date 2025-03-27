@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "agent-searchdata-exactor"
+version = "0.0.1"
+authors = [
+    "Song Yuyang"
+]
+description = "A user new agent template"
+license = "MIT License"
+homepage = "https://github.com/moxin-org/mofa"
+documentation = "https://github.com/moxin-org/mofa/blob/main/README.md"
+readme = "README.md"
+packages = [{include = "agent_searchdata_exactor"}]  # 添加此行
+
+[tool.poetry.dependencies]
+pyarrow = ">= 5.0.0"
+beautifulsoup4 = "*"
+requests = "*"
+playwright = "*"
+
+[tool.poetry.scripts]
+agent-searchdata-exactor = "agent_searchdata_exactor.main:main"  # 修改为下划线
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"

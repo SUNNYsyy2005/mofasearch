@@ -1,0 +1,1216 @@
+/home/sunny/dora/lib/python3.10/site-packages/pydantic/_internal/_config.py:295: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+/home/sunny/dora/lib/python3.10/site-packages/pydantic/_internal/_config.py:295: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Error occurred: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+Error occurred: 'OPENAI_API_KEY'
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+Error occurred: 'OPENAI_API_KEY'
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+Error occurred: 'OPENAI_API_KEY'
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+Error occurred: 'OPENAI_API_KEY'
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 236, in wrapper
+    func(*args, **kwargs)
+Error occurred: 'OPENAI_API_KEY'
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 185, in run
+    client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+  File "/usr/lib/python3.10/os.py", line 680, in __getitem__
+Error occurred: 'OPENAI_API_KEY'
+    raise KeyError(key) from None
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
