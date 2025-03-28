@@ -5,7 +5,19 @@ nodes:
     outputs:
       - data
     inputs:
-      agent_searchdata_exactor_result: searchdata-exactor-agent/agent_searchdata_exactor_result
+      agent_searchdata_integration_result: searchdata-integration-agent/agent_searchdata_integration_result
+      searchdata_exactor_result: searchdata-exactor-agent/agent_searchdata_exactor_result
+  
+  - id: searchwords-generator-agent
+    build: pip install -e ../../agent-hub/agent-searchwords-generator
+    path: agent-searchwords-generator
+    outputs:
+      - agent_searchwords_generator_result
+    inputs:
+      task: terminal-input/data
+    env:
+      IS_DATAFLOW_END: false
+      WRITE_LOG: true
 
   - id: searchdata-exactor-agent
     build: pip install -e ../../agent-hub/agent-searchdata-exactor
@@ -14,6 +26,17 @@ nodes:
       - agent_searchdata_exactor_result
     inputs:
       task: terminal-input/data
+    env:
+      IS_DATAFLOW_END: false
+      WRITE_LOG: true
+  
+  - id: searchdata-integration-agent
+    build: pip install -e ../../agent-hub/agent-searchdata-integration
+    path: agent-searchdata-integration
+    outputs:
+      - agent_searchdata_integration_result
+    inputs:
+      searchdata_exactor_result: searchdata-exactor-agent/agent_searchdata_exactor_result
     env:
       IS_DATAFLOW_END: true
       WRITE_LOG: true

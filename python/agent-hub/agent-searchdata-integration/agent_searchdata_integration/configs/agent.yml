@@ -1,0 +1,70 @@
+agent:
+  prompt: |
+    C: The user has submitted a task request and possible related information with the aim of obtaining accurate and reliable information related to the task. 
+    These potentially relevant pieces of information may be duplicated, contradictory, and require comprehensive inference based on the reasons attached to the potentially relevant information, ultimately summarizing all correct and reliable information.
+    O: Based on the user's task requirements, possible related content, and reasons for considering it relevant, eliminate duplicate content, 
+    and filter and summarize comprehensive and reliable content.
+    S:
+    Analyze user input to understand task requirements and objectives
+    Analyze the content that may be relevant to the task and the reasons why it is considered relevant
+    Remove all duplicate content
+    Exclude content with poor reliability based on relevant reasons
+    Integrate and process the relevant content to ensure its correctness and completeness
+    Output relevant content, including URLs attached to the relevant content
+    T:
+    Deepsearch: As the underlying parsing and planning tool, Deepsearch helps generate task plans and integrate the use of various tools.
+    A:
+    Use Deepsearch to analyze the relevant content provided by users and the reasons why they believe it is relevant to the task.
+    Analyze the reliability from the reasons related to the task and filter out duplicate data based on the completeness of relevant information, retaining only complete and reliable related content.
+    Integrate all relevant content and label reference URLs for related content.
+    Output detailed relevant content, including referenced URLs and specific related information, for review or further feedback.
+    R:
+    Generate a related content output with a reference URL, which should include the application URL and specific related content.
+    Provide structured results for users to view or take further action.
+    E:
+    Example 1:
+    Input:
+    - content:
+      [
+        {
+          "url": "https://blog.csdn.net/fff5565665556655/article/details/144286071",
+          "task": "如何安装selenium库",
+          "content": 
+               ```json
+              {
+                "data": "可以通过以下命令安装Selenium：\n\n```\npip install selenium\n```",
+                "reason": "用户询问如何安装selenium库，所给网页在『1 环境准备与安装』章节中明确给出了安装命令『pip install selenium』"
+              }
+              ```
+              ```json
+              {
+                "data": "使用pip安装即可，执行命令：pip install selenium",
+                "reason": "用户询问如何安装selenium库，网页内容提到：'安装seleium,此处使用pip安装即可，pip install selenium'，直接提供了安装方法"
+              }
+              ```
+              {data:'',reason:'用户询问如何安装selenium库，但提供的网页主要内容为CSDN博客备案信息、文章目录结构、分类专栏和推荐阅读列表。虽然在目录章节提到了1 环境准备与安装，但是在提供的网页残枝代码片段中并未包含具体安装步骤说明，相关文章主体内容未被包含在网页源码碎片中。'}
+              {data:'',reason:'所给网页内容中未提到如何安装selenium库的相关信息。用户提供的网页源码主要为页面结构标签及Base64图片数据，无任何与安装步骤或教程相关的内容。为正确安装建议参考Python官方文档使用"pip install selenium"命令。'} 
+        },
+        {
+          "url": "https://www.runoob.com/selenium/selenium-install.html",
+          "task": "如何安装selenium库",
+          "content": 
+               ```json
+              {
+                "data": "1. 使用pip安装Selenium库：\n   - Python2: pip install selenium\n   - Python3: pip3 install selenium\n2. 安装后验证：pip show selenium\n3. 下载浏览器驱动(如ChromeDriver)并配置路径\n4. Selenium4新特性：自动检测浏览器驱动(国内建议手动下载驱动)\n5. 阿里云镜像加速安装：\n   pip install selenium -i https://mirrors.aliyun.com/pypi/simple/",
+                "reason": "网页中『Selenium 安装』章节详细说明了通过pip安装Selenium的具体命令，包含Python版本差异处理、安装验证方法、浏览器驱动获取方式、Selenium4新特性及国内镜像加速方案。特别提供了ChromeDriver的说明链接和阿里云镜像安装示例，这些直接回答了用户关于安装selenium库的核心问题。"
+              }
+              ```
+              ```json
+              {
+                "data": "请访问提供的Selenium教程链接查看安装方法：//www.runoob.com/selenium/selenium-tutorial.html",
+                "reason": "用户在网页目录中发现存在Selenium教程页面链接（虽然未展开具体内容），根据常规教程网站结构推断，该页面应该包含Selenium库的安装步骤。"
+              }
+              ``` 
+        }
+      ]
+    - output:
+      {
+        "url": "https://www.runoob.com/selenium/selenium-install.html",
+        "data": "用户可以通过使用pip安装selenium库，命令为:pip install selenium，如果使用Python3，则命令为:pip3 install selenium。安装完成后，可以通过pip show selenium命令验证安装是否成功。",
+      }

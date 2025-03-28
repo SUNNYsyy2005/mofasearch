@@ -7,27 +7,12 @@ import os
 from pathlib import Path
 @run_agent
 def run(agent:MofaAgent):
-    task = agent.receive_parameter('task')
-    def read_markdown_file_basic(file_path: str):
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                markdown_text = f.read()
-                return markdown_text
-        except FileNotFoundError:
-            print(f"错误：文件未找到：{file_path}")
-            return None
-        except Exception as e:
-            print(f"读取文件时发生错误：{e}")
-            return None
-
+    task = agent.receive_parameter('searchdata_exactor_result')
+    if task and len(task) > 0:
+        task = task[1:]  # 使用切片操作删除第一个字符
     agent_config_dir_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), )
     config_yml = read_yaml(agent_config_dir_path + f'/configs/agent.yml')
     prompt = config_yml.get('agent', {}).get('prompt', '')
-    readme_files = config_yml.get('agent', {}).get('connectors', None)
-    readme_data = {}
-    if readme_files is not None:
-        for file_path in readme_files:
-            readme_data.update({Path(file_path).parent.name: read_markdown_file_basic(file_path=file_path)})
     load_dotenv(dotenv_path='.env.secret')
     if os.getenv('LLM_API_KEY') is not None:
         os.environ['OPENAI_API_KEY'] = os.getenv('LLM_API_KEY')
@@ -40,7 +25,7 @@ def run(agent:MofaAgent):
     user_input = task
     messages = [
         {"role": "system",
-         "content": prompt + "  readme_data: " + json.dumps(readme_data)},
+         "content": prompt},
         {"role": "user", "content": user_input},
     ]
     print('LLM_API_KEY', os.getenv('LLM_API_KEY'))
@@ -64,9 +49,13 @@ def run(agent:MofaAgent):
     print("<think> : ", reasoning_content)
     print('-------------')
     print("<content> ", content)
-    agent.send_output('agent_searchwords_integration_results', reasoning_content)
+    agent.send_output('agent_searchdata_integration_result', content)
+
+    
 def main():
-    agent = MofaAgent(agent_name='agent-searchwords-integration')
+    agent = MofaAgent(agent_name='agent-searchdata-integration')
     run(agent=agent)
 if __name__ == "__main__":
     main()
+#{"url":"https://www.techphant.cn/blog/99308.html","task":"lora通信有什么优点"}
+#{"url":"https://www.runoob.com/selenium/selenium-install.html","task":"如何安装selenium库"}

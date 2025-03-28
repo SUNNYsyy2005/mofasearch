@@ -1,113 +1,51 @@
 agent:
   prompt: |
-    C: The user has submitted a task request, with the goal of parsing and completing the task. This task may involve multiple domains or specific issues, and requires different tools for information crawling and processing.
-    The goal of the task is to extract relevant information from the user's input and use it for in-depth analysis and planning. Additionally, the task includes analyzing the multiple URLs associated with each task and incorporating them into the plan.
-
-    O: Based on the user's input or requirements, generate a detailed task plan. The plan should include the required tools (such as Connectors and Extractors) and follow a logical sequence of steps for executing the task.
-    It should also incorporate and analyze multiple URLs for each task, selecting the appropriate Connector and Extractor for each one.
-
+    C: The user has submitted a task request and simplified source code for potentially relevant web pages, with the aim of obtaining task related content from the web pages. 
+    This task may require different types of relevant data, which need to be filtered and judged based on the different data contents of the webpage. 
+    The goal of this task is to extract relevant information from user provided web pages and submit task requests, and to streamline and summarize the relevant information. 
+    In addition, the provided webpage may have zero or multiple pieces of content related to user task requests, and all relevant information needs to be streamlined and summarized. 
+    In addition, the content of the website may be only part of the webpage, so it's acceptable to give the user no relevant information. 
+    O: Based on the user's task request and the given webpage, summarize the webpage content related to the user's task request. 
+    The content should include all the relevant paragraphs.
     S:
-
-    Parse the user input and understand the task requirements and objectives.
-    Identify the main goals of the task and the types of information required (e.g., text, data, media, etc.).
-    Analyze the multiple URLs associated with each task and determine which ones are relevant for the task at hand.
-    Choose the appropriate Connectors (crawling tools) to obtain the required information sources from the identified URLs.
-    Select suitable Extractors to extract useful information from the crawled data.
-    Integrate all the extracted information to ensure the completeness of the task plan.
-    Output the task plan, including the selected URLs, connectors, and extractors, and further optimize or adjust it based on user feedback.
+    Analyze user task requests to understand task requirements and objectives.
+    Determine the main objectives of the task and the type of information required (text, data, etc.).
+    Analyze the given webpage architecture and understand the webpage content.
+    Find information related to user task requirements in the webpage content.
+    Integrate all relevant information to ensure it is truly closely related to the task.
+    Output integrated information, including task related information and inferred reasons.
     T:
-
-    Connectors: Crawling tools (e.g., web scraping, API requests, database queries) to gather the necessary data for the task.
-    Extractors: Natural language processing tools (such as LLMs, model extractors) to extract meaningful content from the data.
-    Deepsearch: As the underlying parsing and planning tool, Deepsearch helps generate task plans and integrate the use of various tools.
-    URLs: A list of URLs corresponding to each task, which are analyzed and incorporated into the task plan.
+    Deepsearch: As the underlying parsing and planning tool, Deepsearch helps extract relevant content.
+    web_contents: simplified source code for potentially relevant web pages.
+    search_task: The task is to extract relevant information from the user's input and use it for in-depth analysis and planning.
     A:
-
-    Use Deepsearch to analyze the user's input and generate a framework for the task plan.
-    Based on the task's needs, analyze the provided URLs to determine which ones are relevant to the task.
-    Select appropriate Connectors for crawling the relevant data sources from these URLs.
-    Use Extractors to extract structured information from the crawled data.
-    Consolidate the extracted data to form the final task plan.
-    Output the detailed task plan with the identified URLs, connectors, extractors, and steps for review or further feedback.
+    Use Deepsearch to analyze user task requests and related webpage content provided.
+    Based on the needs of the task, determine which specific content is related to the task and provide relevant reasons.
+    Integrate the extracted data to form the final relevant content output.
+    Output complete relevant content, including relevant information and reasons for considering it relevant, for review or further feedback.
     R:
-
     Generate an output that includes the task plan, which should outline the specific steps, tools used, data sources (URLs), and connectors for the task.
     Provide the structured results for the user to view or take further action.
     If the user does not provide a URL, then based on your understanding, suggest 1-4 URLs related to the user's needs. Do not fabricate.
-
-  extract_prompt: | 
-    [CONTEXT]
-    You're a Senior Data Extraction Specialist tasked with identifying connector configurations and their associated URLs from technical documentation. The output must strictly follow the provided schema.
-    
-    [OBJECTIVE]
-    Extract all connector names and their corresponding URLs from the input content with 100% accuracy.
-    
-    [STEPS]
-    1. Scan the entire input for connector configurations
-    2. For each connector:
-       a. Capture the exact 'connector_name' (case-sensitive)
-       b. Extract all associated URLs as strings in a list
-       c. Return empty list if no URLs found
-    3. Validate against the response schema before final output
-    
-    [TONE]
-    Formal and technical
-    
-    [AUDIENCE]
-    Data pipeline engineers and system integrators
-    
-    [RESPONSE FORMAT]
-    Strict JSON format matching this schema:
-    {response_schema}
-    
-    [EXAMPLES]
+    E:
     Example 1:
     Input:
-    - connectors:
-      - name: "selenium-connector"
-        urls: ["https://news.example.com", "https://blog.example.com"]
-      - name: "crawl4ai-connector"
-        config_path: "/connectors/crawl4ai"
-    
+    - search_task: "2025 MoFA Search AI 搜索引擎大赛时间"
+    - web_contents:"<!DOCTYPE html>
+                <html>
+                <head>
+                <title>2025 MoFA Search AI 搜索引擎大赛 - 黑客马拉松编程大赛 - 训练营</title>
+                <meta charset="utf-8">
+                </head>
+                <body>
+                <h1>2025 MoFA Search AI 搜索引擎大赛 - 黑客马拉松编程大赛 - 训练营</h1>
+                <body><a href="/gosim"><a href="/gosim/camp/MoFA2025">2025 MoFA Search AI 搜索引擎大赛</a><ul><li><a href="/gosim/camp/MoFA2025/stage/0">MoFA Search AI 搜索引擎大赛</a><ul></ul></li></ul></li><li><a href="/gosim/camp/EAI">2024 具身智能比赛</a></li><li><a href="/gosim/camp/SAH">2024 超级智能体编程大赛</a></li></ul>2025 MoFA Search AI 搜索引擎大赛时间：2025/03/14-2025/03/30Moly 与 MolyKit 开发套件介绍（3.27 17:00～17:45)#腾讯会议：680-121-263<a href="https://meeting.tencent.com/dm/xjc79HLSsJYI">会议链接</a>公告栏报名人数303 "
     Output:
-    {{
-      "connector_tasks": [
-        {{
-          "connector_name": "selenium-connector",
-          "urls": ["https://news.example.com", "https://blog.example.com"]
-        }},
-        {{
-          "connector_name": "crawl4ai-connector",
-          "urls": []
-        }}
-      ]
-    }}
-    
+    {data:'2025/03/14-2025/03/30',reason:'用户问比赛时间，所给网页中2025 MoFA Search AI 搜索引擎大赛时间：2025/03/14-2025/03/30直接提到了'}
+
     Example 2:
     Input:
-    '''Project connectors:
-    1. DeepSeek API Connector
-       - URLs: https://api.deepseek.com/v1, https://monitor.deepseek.com
-    2. Legacy Database Connector (no URLs configured)'''
-    
+    - search_task: "MoFA搜索引擎是什么"
+    - web_contents:"</a>公告栏报名人数303 人来自高校190 所来自城市76 个大赛简介MoFA搜索引擎是一款创新的组合搜索引擎，它摒弃了传统爬虫技术，致力于保护用户隐私并尊重内容提供者的权益。该引擎具备实时信息返回能力，搜索范围广泛，能深入挖掘深网和本地信息，搜索能力远超传统搜索引擎。其去中心化的架构和分布式搜索功能，实现了高效的信息检索。MoFA搜索引擎通过智能体的组合实现搜索，展现出强大的搜索能力。此外，它还是一个开放式平台，依赖于开发者集体协作，共同打造更加智能、高效的搜索体验。立即报名大赛点击报名0MoFA Search AI 搜索引擎大赛<ul><li><a href="/gosim/camp/MoFA2“
     Output:
-    {{
-      "connector_tasks": [
-        {{
-          "connector_name": "DeepSeek API Connector",
-          "urls": ["https://api.deepseek.com/v1", "https://monitor.deepseek.com"]
-        }},
-        {{
-          "connector_name": "Legacy Database Connector",
-          "urls": []
-        }}
-      ]
-    }}
-    
-    [INPUT CONTENT]
-    {content}
-
-
-  connectors:
-    - /home/sunny/mofasearch/python/agent-hub/crawl4ai-connector/README.md
-    - /home/sunny/mofasearch/python/agent-hub/selenium-connector/README.md
+    {data:'MoFA搜索引擎是一款创新的组合搜索引擎，它摒弃了传统爬虫技术，致力于保护用户隐私并尊重内容提供者的权益。该引擎具备实时信息返回能力，搜索范围广泛，能深入挖掘深网和本地信息，搜索能力远超传统搜索引擎。其去中心化的架构和分布式搜索功能，实现了高效的信息检索。MoFA搜索引擎通过智能体的组合实现搜索，展现出强大的搜索能力。此外，它还是一个开放式平台，依赖于开发者集体协作，共同打造更加智能、高效的搜索体验。',reason:'用户问什么是Mofa搜索引擎，所给网页直接提到了MoFA搜索引擎的定义'}

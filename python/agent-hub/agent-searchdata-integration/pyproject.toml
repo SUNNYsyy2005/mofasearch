@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "agent-searchwords-generator"
+name = "agent-searchdata-integration"
 version = "0.0.1"
 authors = [
     "Song Yuyang"
@@ -9,17 +9,15 @@ license = "MIT License"
 homepage = "https://github.com/moxin-org/mofa"
 documentation = "https://github.com/moxin-org/mofa/blob/main/README.md"
 readme = "README.md"
-packages = [{include = "agent_searchwords_generator"}]  # 添加此行
+packages = [{ include = "agent_searchdata_integration" }]
 
 [tool.poetry.dependencies]
 pyarrow = ">= 5.0.0"
-beautifulsoup4 = "*"
-requests = "*"
-playwright = "*"
 
 [tool.poetry.scripts]
-agent-searchwords-generator= "agent_searchwords_generator.main:main"  # 修改为下划线
+agent-searchdata-integration = "agent_searchdata_integration.main:main"
 
 [build-system]
 requires = ["poetry-core>=1.8.0"]
 build-backend = "poetry.core.masonry.api"
+

@@ -1,0 +1,21 @@
+/home/sunny/dora/lib/python3.10/site-packages/pydantic/_internal/_config.py:295: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+/home/sunny/dora/lib/python3.10/site-packages/pydantic/_internal/_config.py:295: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+  warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+Traceback (most recent call last):
+  File "/home/sunny/dora/bin/agent-searchdata-exactor", line 8, in <module>
+    sys.exit(main())
+  File "/home/sunny/mofasearch/python/agent-hub/agent-searchdata-exactor/agent_searchdata_exactor/main.py", line 237, in main
+    agent = MofaAgent(agent_name='agent-searchdata-exactor')
+  File "<attrs generated methods mofa.agent_build.base.base_agent.MofaAgent>", line 43, in __init__
+    self.__attrs_post_init__()
+  File "/home/sunny/mofa/python/mofa/agent_build/base/base_agent.py", line 94, in __attrs_post_init__
+    self.node = Node(self.agent_name)
+RuntimeError: Could not setup node from node id. Make sure to have a running dataflow with this dynamic node
+
+Caused by:
+   0: failed to init event stream
+   1: subscribe failed: Node searchdata-integration-agent exited before initializing dora. For more information, run `dora logs 0195db5a-6721-7249-a932-708adaad444b searchdata-integration-agent`.
+
+Location:
+    apis/rust/node/src/event_stream/mod.rs:139:17
