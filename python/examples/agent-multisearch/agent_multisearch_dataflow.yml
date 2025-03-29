@@ -5,6 +5,7 @@ nodes:
     outputs:
       - data
     inputs:
+      searchwords-generator-content: searchwords-generator-agent/agent_searchwords_generator_result
       searchdata_exactor_content: searchdata-exactor-agent/agent_searchdata_exactor_result
       agent_searchdata_integration_result: searchdata-integration-agent/agent_searchdata_integration_result
   
@@ -38,5 +39,5 @@ nodes:
     inputs:
       searchdata_exactor_result: searchdata-exactor-agent/agent_searchdata_exactor_result
     env:
-      IS_DATAFLOW_END: false
+      IS_DATAFLOW_END: true
       WRITE_LOG: true

@@ -50,11 +50,17 @@ def run(agent:MofaAgent):
             data = chunk.choices[0].delta.content
             if data is not None:
                 content += chunk.choices[0].delta.content
+                    # 移除content中的所有回车符
+    content = content.replace('\n', '').replace('\r', '')
     print("Searching:", content)
-    content = "Lora通信优点"
     # 使用大模型输出作为搜索关键词
-    search_results = scrape_baidu_results(content, max_pages=1)
-    print("Search Results:", search_results)
+    try:
+        search_results = scrape_baidu_results(content, max_pages=1)
+        print("Search Results:", search_results)
+    except Exception as e:
+        print(f"搜索发生错误: {e}")
+        search_results = []  # 出错时使用空列表
+
     # 转换为指定的JSON格式
     formatted_results = []
     for result in search_results:
@@ -62,16 +68,15 @@ def run(agent:MofaAgent):
             "url": result["link"],
             "task": content
         })
-    formatted_results = [
-        {
-            "url": 'https://baijiahao.baidu.com/s?id=1793834882016135530&wfr=spider&for=pc',
+    
+    # 确保至少有一个结果，如果没有搜索到结果，添加一个默认结果
+    if not formatted_results:
+        formatted_results.append({
+            "url": "https://www.baidu.com/s?wd=" + content.replace(" ", "+"),
             "task": content
-        } ,
-        {
-            "url": 'https://baijiahao.baidu.com/s?id=1803651328887029896&wfr=spider&for=pc',
-            "task": content
-        }
-    ]
+        })
+    
+    formatted_results = formatted_results[0:2]
     # 转换为JSON字符串
     results_json = json.dumps(formatted_results, ensure_ascii=False)
     print("Formatted Results JSON:", results_json)
