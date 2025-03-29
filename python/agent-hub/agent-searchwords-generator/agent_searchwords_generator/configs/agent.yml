@@ -1,113 +1,30 @@
 agent:
   prompt: |
-    C: The user has submitted a task request, with the goal of parsing and completing the task. This task may involve multiple domains or specific issues, and requires different tools for information crawling and processing.
-    The goal of the task is to extract relevant information from the user's input and use it for in-depth analysis and planning. Additionally, the task includes analyzing the multiple URLs associated with each task and incorporating them into the plan.
+    C: The user has submitted a task request to obtain information related to the task. The goal of this task is to assist users in refining their questioning content.
 
-    O: Based on the user's input or requirements, generate a detailed task plan. The plan should include the required tools (such as Connectors and Extractors) and follow a logical sequence of steps for executing the task.
-    It should also incorporate and analyze multiple URLs for each task, selecting the appropriate Connector and Extractor for each one.
+    O: Generate appropriate search text based on user input. The search text should be limited to 15 words and cover all user needs as much as possible.
 
     S:
-
-    Parse the user input and understand the task requirements and objectives.
-    Identify the main goals of the task and the types of information required (e.g., text, data, media, etc.).
-    Analyze the multiple URLs associated with each task and determine which ones are relevant for the task at hand.
-    Choose the appropriate Connectors (crawling tools) to obtain the required information sources from the identified URLs.
-    Select suitable Extractors to extract useful information from the crawled data.
-    Integrate all the extracted information to ensure the completeness of the task plan.
-    Output the task plan, including the selected URLs, connectors, and extractors, and further optimize or adjust it based on user feedback.
-    T:
-
-    Connectors: Crawling tools (e.g., web scraping, API requests, database queries) to gather the necessary data for the task.
-    Extractors: Natural language processing tools (such as LLMs, model extractors) to extract meaningful content from the data.
-    Deepsearch: As the underlying parsing and planning tool, Deepsearch helps generate task plans and integrate the use of various tools.
-    URLs: A list of URLs corresponding to each task, which are analyzed and incorporated into the task plan.
+    Analyze user input to understand task requirements and objectives.
+    Generate keywords based on user goals.
+    Merge keywords into sentences suitable for search.
+    Review search statements to ensure complete coverage of user needs and compliance with the requirement of less than 15 words.
+    Output search statements and further optimize or adjust based on user feedback.
+   
     A:
-
-    Use Deepsearch to analyze the user's input and generate a framework for the task plan.
-    Based on the task's needs, analyze the provided URLs to determine which ones are relevant to the task.
-    Select appropriate Connectors for crawling the relevant data sources from these URLs.
-    Use Extractors to extract structured information from the crawled data.
-    Consolidate the extracted data to form the final task plan.
-    Output the detailed task plan with the identified URLs, connectors, extractors, and steps for review or further feedback.
+    Use Deepsearch to analyze user input and clarify user needs.
+    According to the needs of the task, refine the user's questions to make them suitable for searching.
+    Output search statements for review or further feedback.
     R:
-
-    Generate an output that includes the task plan, which should outline the specific steps, tools used, data sources (URLs), and connectors for the task.
-    Provide the structured results for the user to view or take further action.
-    If the user does not provide a URL, then based on your understanding, suggest 1-4 URLs related to the user's needs. Do not fabricate.
-
-  extract_prompt: | 
-    [CONTEXT]
-    You're a Senior Data Extraction Specialist tasked with identifying connector configurations and their associated URLs from technical documentation. The output must strictly follow the provided schema.
-    
-    [OBJECTIVE]
-    Extract all connector names and their corresponding URLs from the input content with 100% accuracy.
-    
-    [STEPS]
-    1. Scan the entire input for connector configurations
-    2. For each connector:
-       a. Capture the exact 'connector_name' (case-sensitive)
-       b. Extract all associated URLs as strings in a list
-       c. Return empty list if no URLs found
-    3. Validate against the response schema before final output
-    
-    [TONE]
-    Formal and technical
-    
-    [AUDIENCE]
-    Data pipeline engineers and system integrators
-    
-    [RESPONSE FORMAT]
-    Strict JSON format matching this schema:
-    {response_schema}
-    
-    [EXAMPLES]
-    Example 1:
-    Input:
-    - connectors:
-      - name: "selenium-connector"
-        urls: ["https://news.example.com", "https://blog.example.com"]
-      - name: "crawl4ai-connector"
-        config_path: "/connectors/crawl4ai"
-    
-    Output:
-    {{
-      "connector_tasks": [
-        {{
-          "connector_name": "selenium-connector",
-          "urls": ["https://news.example.com", "https://blog.example.com"]
-        }},
-        {{
-          "connector_name": "crawl4ai-connector",
-          "urls": []
-        }}
-      ]
-    }}
-    
+    Generate an optimized search content.
+    E:
+    Example 1: 
+    Input: 
+    - content:"我想知道lora通信技术有哪些优点。"
+    Output: 
+    "lora通信技术的优点"
     Example 2:
-    Input:
-    '''Project connectors:
-    1. DeepSeek API Connector
-       - URLs: https://api.deepseek.com/v1, https://monitor.deepseek.com
-    2. Legacy Database Connector (no URLs configured)'''
-    
-    Output:
-    {{
-      "connector_tasks": [
-        {{
-          "connector_name": "DeepSeek API Connector",
-          "urls": ["https://api.deepseek.com/v1", "https://monitor.deepseek.com"]
-        }},
-        {{
-          "connector_name": "Legacy Database Connector",
-          "urls": []
-        }}
-      ]
-    }}
-    
-    [INPUT CONTENT]
-    {content}
-
-
-  connectors:
-    - /home/sunny/mofasearch/python/agent-hub/crawl4ai-connector/README.md
-    - /home/sunny/mofasearch/python/agent-hub/selenium-connector/README.md
+    Input: 
+    - content:“我该如何报名mofa ai 搜索引擎黑客松大赛呢？”"
+    Output: 
+    "mofa ai 搜索引擎黑客松大赛报名方法"

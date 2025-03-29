@@ -10,6 +10,7 @@ def run(agent:MofaAgent):
     task = agent.receive_parameter('searchdata_exactor_result')
     if task and len(task) > 0:
         task = task[1:]  # 使用切片操作删除第一个字符
+    print("task", task)
     agent_config_dir_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), )
     config_yml = read_yaml(agent_config_dir_path + f'/configs/agent.yml')
     prompt = config_yml.get('agent', {}).get('prompt', '')
@@ -24,8 +25,7 @@ def run(agent:MofaAgent):
 
     user_input = task
     messages = [
-        {"role": "system",
-         "content": prompt},
+        {"role": "system","content": prompt},
         {"role": "user", "content": user_input},
     ]
     print('LLM_API_KEY', os.getenv('LLM_API_KEY'))
@@ -49,8 +49,7 @@ def run(agent:MofaAgent):
     print("<think> : ", reasoning_content)
     print('-------------')
     print("<content> ", content)
-    agent.send_output('agent_searchdata_integration_result', content)
-
+    agent.send_output(agent_output_name='agent_searchdata_integration_result', agent_result=content)
     
 def main():
     agent = MofaAgent(agent_name='agent-searchdata-integration')

@@ -5,29 +5,20 @@ from mofa.utils.files.read import read_yaml
 from openai import OpenAI
 import os
 from pathlib import Path
+# 导入测试文件中的搜索函数
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from .search import scrape_baidu_results
+
 @run_agent
 def run(agent:MofaAgent):
     task = agent.receive_parameter('task')
-    def read_markdown_file_basic(file_path: str):
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                markdown_text = f.read()
-                return markdown_text
-        except FileNotFoundError:
-            print(f"错误：文件未找到：{file_path}")
-            return None
-        except Exception as e:
-            print(f"读取文件时发生错误：{e}")
-            return None
-
+    if not task or len(task) == 0:
+        return
+    print("terminal input task", task)
     agent_config_dir_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), )
     config_yml = read_yaml(agent_config_dir_path + f'/configs/agent.yml')
     prompt = config_yml.get('agent', {}).get('prompt', '')
-    readme_files = config_yml.get('agent', {}).get('connectors', None)
-    readme_data = {}
-    if readme_files is not None:
-        for file_path in readme_files:
-            readme_data.update({Path(file_path).parent.name: read_markdown_file_basic(file_path=file_path)})
     load_dotenv(dotenv_path='.env.secret')
     if os.getenv('LLM_API_KEY') is not None:
         os.environ['OPENAI_API_KEY'] = os.getenv('LLM_API_KEY')
@@ -39,8 +30,7 @@ def run(agent:MofaAgent):
 
     user_input = task
     messages = [
-        {"role": "system",
-         "content": prompt + "  readme_data: " + json.dumps(readme_data)},
+        {"role": "system","content": prompt},
         {"role": "user", "content": user_input},
     ]
     print('LLM_API_KEY', os.getenv('LLM_API_KEY'))
@@ -49,7 +39,6 @@ def run(agent:MofaAgent):
     response = client.chat.completions.create(
         model=os.getenv('LLM_MODEL_NAME', 'gpt-4o'),
         messages=messages, stream=True, )
-    
     reasoning_content = ""
     content = ""
     for chunk in response:
@@ -61,10 +50,33 @@ def run(agent:MofaAgent):
             data = chunk.choices[0].delta.content
             if data is not None:
                 content += chunk.choices[0].delta.content
-    print("<think> : ", reasoning_content)
-    print('-------------')
-    print("<content> ", content)
-    agent.send_output('agent_searchwords_integration_results', reasoning_content)
+    print("Searching:", content)
+    content = "Lora通信优点"
+    # 使用大模型输出作为搜索关键词
+    search_results = scrape_baidu_results(content, max_pages=1)
+    print("Search Results:", search_results)
+    # 转换为指定的JSON格式
+    formatted_results = []
+    for result in search_results:
+        formatted_results.append({
+            "url": result["link"],
+            "task": content
+        })
+    formatted_results = [
+        {
+            "url": 'https://baijiahao.baidu.com/s?id=1793834882016135530&wfr=spider&for=pc',
+            "task": content
+        } ,
+        {
+            "url": 'https://baijiahao.baidu.com/s?id=1803651328887029896&wfr=spider&for=pc',
+            "task": content
+        }
+    ]
+    # 转换为JSON字符串
+    results_json = json.dumps(formatted_results, ensure_ascii=False)
+    print("Formatted Results JSON:", results_json)
+    # 发送搜索结果作为输出
+    agent.send_output(agent_output_name='agent_searchwords_generator_result', agent_result='#'+results_json)
 def main():
     agent = MofaAgent(agent_name='agent-searchwords-integration')
     run(agent=agent)

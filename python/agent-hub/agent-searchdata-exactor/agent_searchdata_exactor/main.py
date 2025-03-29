@@ -71,7 +71,7 @@ def process_html_with_llm(html_content, task, client=None, model_name=None):
         {"role": "system", "content": prompt},
         {"role": "user", "content": "search_task:"+task+"    web_content:"+html_content},
     ]
-    print(messages)
+    #print(messages)
     
     # 调用API
     response = client.chat.completions.create(
@@ -106,103 +106,75 @@ def process_html_with_llm(html_content, task, client=None, model_name=None):
 def process_webpage_in_segments(url, task, max_tokens=5000, model_name=None, client=None):
     """分段处理网页内容并汇总结果，仅返回汇总内容字符串"""
     # 获取网页内容
-    result = extract_html_sync(url)
-    
-    if not result["success"]:
-        return "无法获取网页内容"
-    
-    # 初始化OpenAI客户端（如果未提供）
-    if client is None:
-        client = init_openai_client()
-    
-    # 获取标题和HTML内容
-    title = result["title"]
-    html_content = result["html_content"]
-    
-    # 分段
-    print(f"开始分段处理网页内容: {title}")
-    segments = split_text_by_tokens(html_content, max_tokens=max_tokens, model=model_name)
-    print(f"内容已分为 {len(segments)} 段")
-    
-    # 处理每个段落
-    segment_results = []
-    for i, segment in enumerate(segments):
-        print(f"处理第 {i+1}/{len(segments)} 段内容...")
-        # 构建包含段落信息的提示
-        #segment_prompt = f"{prompt}\n\n这是文档的第 {i+1}/{len(segments)} 部分。标题: {title}"
+    try:
+        result = extract_html_sync(url)
         
-        # 调用LLM处理
-        segment_result = process_html_with_llm(
-            segment, 
-            task,
-            #segment_prompt, 
-            client=client, 
-            model_name=model_name
-        )
+        if not result["success"]:
+            print(f"提取网页内容失败: {url}")
+            return {"url": url, "task": task, "content": "无法获取网页内容"}
         
-        segment_results.append(segment_result)
-        print(f"第 {i+1} 段处理完成")
-        #print("-------------")
-        #print(segment_result["content"])
-        #print("-------------")
-        # 添加短暂延迟，避免API限制
-        if i < len(segments) - 1:
-            time.sleep(1)
-    
-    # 汇总结果
-    print("所有段落处理完成，开始汇总结果...")
-    
-    # 汇总所有段落的内容
-    all_contents = [result["content"] for result in segment_results]
-    combined_content = "\n\n".join(all_contents)
-    return {
-        "url": url,
-        "task": task,
-        "content": combined_content
-    }
+        # 初始化OpenAI客户端（如果未提供）
+        if client is None:
+            client = init_openai_client()
+        
+        # 获取标题和HTML内容
+        title = result["title"]
+        html_content = result["html_content"]
+        
+        # 分段
+        print(f"开始分段处理网页内容: {title}")
+        segments = split_text_by_tokens(html_content, max_tokens=max_tokens, model=model_name)
+        print(f"内容已分为 {len(segments)} 段")
+        
+        # 处理每个段落
+        segment_results = []
+        for i, segment in enumerate(segments):
+            print(f"处理第 {i+1}/{len(segments)} 段内容...")
+            # 调用LLM处理
+            segment_result = process_html_with_llm(
+                segment, 
+                task,
+                client=client, 
+                model_name=model_name
+            )
+            
+            segment_results.append(segment_result)
+            print(f"第 {i+1} 段处理完成")
+            
+            # 添加短暂延迟，避免API限制
+            if i < len(segments) - 1:
+                time.sleep(1)
+        
+        # 汇总结果
+        print("所有段落处理完成，开始汇总结果...")
+        
+        # 汇总所有段落的内容
+        all_contents = [result["content"] for result in segment_results]
+        combined_content = "\n\n".join(all_contents)
+        return {
+            "url": url,
+            "task": task,
+            "content": combined_content
+        }
+    except Exception as e:
+        print(f"处理网页 {url} 时发生错误: {str(e)}")
+        # 返回错误信息
+        return {
+            "url": url,
+            "task": task,
+            "content": f"处理网页时发生错误: {str(e)}"
+        }
 
 @run_agent
 def run(agent:MofaAgent):
-    task_json = agent.receive_parameter('task')
+    task_json = agent.receive_parameter('agent_searchwords_generator_result')
     if task_json and len(task_json) > 0:
         task_json = task_json[1:]  # 使用切片操作删除第一个字符
     else:
         return
     print(f"接收到的原始任务: {task_json}")
     
-    # 解析JSON字符串为Python对象
-    try:
-        task_obj = json.loads(task_json)     
-        print(f"解析后的任务对象: {task_obj}")
-        # 提取URL和搜索查询
-        url = task_obj.get('url', '')
-        search_query = task_obj.get('task', '')
-        
-        # 参数验证
-        if not url:
-            error_msg = "任务参数缺少URL字段"
-            print(error_msg)
-            url = "https://opencamp.cn/gosim/camp/MoFA2025"  # 默认URL
-            return
-            
-        if not search_query:
-            # 如果没有提供查询，可以使用默认值或返回错误
-            search_query = "2025 MoFA Search AI 报名人数是多少"
-            print(f"未提供查询，使用默认查询: {search_query}")
-        
-    except json.JSONDecodeError as e:
-        # 如果JSON解析失败，尝试将整个字符串作为URL处理
-        print(f"JSON解析失败: {e}")
-        url = "https://opencamp.cn/gosim/camp/MoFA2025"
-        search_query = "2025 MoFA Search AI 报名人数是多少"  # 默认查询
-    print(f"最终使用的URL: {url}")
-    print(f"最终使用的搜索查询: {search_query}")
-    # 设置提示语
-    agent_config_dir_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), )
-    config_yml = read_yaml(agent_config_dir_path + f'/configs/agent.yml')
-    analysis_prompt = config_yml.get('agent', {}).get('prompt', '')
-    
-    # 初始化OpenAI客户端（参照main.py的方式）
+    # 初始化OpenAI客户端
     load_dotenv(dotenv_path='.env.secret')
     if os.getenv('LLM_API_KEY') is not None:
         os.environ['OPENAI_API_KEY'] = os.getenv('LLM_API_KEY')
@@ -220,18 +192,78 @@ def run(agent:MofaAgent):
     print('LLM_BASE_URL', os.getenv('LLM_BASE_URL', None))
     print('LLM_MODEL_NAME', os.getenv('LLM_MODEL_NAME', 'gpt-4o'))
     
-    # 处理网页内容并获取汇总结果
-    result = process_webpage_in_segments(
-        url=url,
-        task=search_query,
-        max_tokens=5000,
-        model_name=os.getenv('LLM_MODEL_NAME', 'gpt-4o'),
-        client=client
-    )
-    result_json = json.dumps(result, ensure_ascii=False)
-    print(f"处理结果: {result_json}")
-    # 直接发送汇总内容作为结果
-    agent.send_output(agent_output_name='agent_searchdata_exactor_result', agent_result='#'+result_json)
+    # 结果数组
+    results = []
+    
+    # 解析JSON字符串为Python对象
+    try:
+        # 尝试解析为对象数组
+        tasks = json.loads(task_json)
+        
+        # 判断是否为数组
+        if not isinstance(tasks, list):
+            tasks = [tasks]  # 如果不是数组，转换为单元素数组
+        
+        print(f"解析后的任务数组: {tasks}")
+        
+        # 创建一个集合来跟踪已处理的URL
+        processed_urls = set()
+        
+        # 处理每个任务
+        for task_obj in tasks:
+            # 提取URL和搜索查询
+            url = task_obj.get('url', '')
+            search_query = task_obj.get('task', '')
+            
+            # 参数验证
+            if not url:
+                error_msg = "任务参数缺少URL字段"
+                print(error_msg)
+                continue  # 跳过此任务
+                
+            if not search_query:
+                # 如果没有提供查询，可以使用默认值或跳过
+                print(f"未提供查询")
+                continue
+            
+            # 检查是否已处理过此URL
+            if url in processed_urls:
+                print(f"URL已处理过，等待2秒后再次处理: {url}")
+                time.sleep(2)  # 添加延迟，确保资源释放
+            
+            print(f"处理任务 - URL: {url}, 查询: {search_query}")
+            
+            # 处理网页内容并获取汇总结果
+            result = process_webpage_in_segments(
+                url=url,
+                task=search_query,
+                max_tokens=5000,
+                model_name=os.getenv('LLM_MODEL_NAME', 'gpt-4o'),
+                client=client
+            )
+            
+            # 添加URL到已处理集合
+            processed_urls.add(url)
+            
+            # 将结果添加到结果数组
+            results.append(result)
+            
+    except json.JSONDecodeError as e:
+        # 如果JSON解析失败，记录错误
+        print(f"JSON解析失败: {e}")
+        # 创建一个错误结果
+        error_result = {
+            "url": "",
+            "task": "",
+            "content": f"JSON解析错误: {str(e)}"
+        }
+        results.append(error_result)
+    
+    # 将结果数组转换为JSON字符串
+    results_json = json.dumps(results, ensure_ascii=False)
+    print(f"所有处理结果: {results_json}")
+    # 发送汇总结果
+    agent.send_output(agent_output_name='agent_searchdata_exactor_result', agent_result='#'+results_json)
 
 def main():
     agent = MofaAgent(agent_name='agent-searchdata-exactor')
