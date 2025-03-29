@@ -12,11 +12,11 @@
   searchdata-integration-agent["**searchdata-integration-agent**"]
   searchwords-generator-agent["**searchwords-generator-agent**"]
   terminal-input["**terminal-input**"]
-  searchwords-generator-agent -- agent_searchwords_generator_result as task --> searchdata-exactor-agent
+  searchwords-generator-agent -- agent_searchwords_generator_result --> searchdata-exactor-agent
   searchdata-exactor-agent -- agent_searchdata_exactor_result as searchdata_exactor_result --> searchdata-integration-agent
   terminal-input -- data as task --> searchwords-generator-agent
   searchdata-integration-agent -- agent_searchdata_integration_result --> terminal-input
-  searchdata-exactor-agent -- agent_searchdata_exactor_result as searchdata_exactor_result --> terminal-input
+  searchdata-exactor-agent -- agent_searchdata_exactor_result as searchdata_exactor_content --> terminal-input
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
